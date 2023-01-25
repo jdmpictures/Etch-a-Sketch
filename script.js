@@ -2,6 +2,8 @@
 const gridButton = document.getElementById("grid-button");
 const colorButton = document.getElementById("color-button");
 let colorValue = document.getElementById('color-slider').value;
+let closeModal = document.getElementsByClassName('close-button');
+let modal = document.getElementsByClassName('modal');
 let rainbow = '';
 let paintColor = 'black';
 
@@ -10,6 +12,7 @@ let paintColor = 'black';
 gridButton.addEventListener('click', createGrid)
 
 // function to set the size of the grid 
+
 function createGrid () {
     grid.innerHTML = " ";
     let gridValue = document.getElementById("grid-slider").value;
@@ -32,7 +35,10 @@ colorButton.addEventListener('click', colorSelector);
 
 function colorSelector () {
     let color = document.getElementById('color-slider').value;
-    if(color == 2){
+    if (color == 1){
+        paintColor = 'black'
+        rainbow = ''
+    } else if(color == 2){
         rainbow = '';
         paintColor = 'red';
     } else if (color == 3) {
@@ -40,7 +46,6 @@ function colorSelector () {
         rainbow = '';
     } else if (color == 4) {
         rainbow = 'active';
-        paint();
     }
 }
 
@@ -52,3 +57,16 @@ function paint () {
     this.style.backgroundColor = paintColor;
 }
 
+
+//Modal open and close functions 
+
+window.onload = function() {
+   document.getElementById('modal').className = 'active' + ' ' + 'modal';
+   document.getElementById('overlay').className = 'active';
+   
+}
+
+closeModal.addEventListener('click', () => {
+    document.getElementById('modal').className = '';
+
+});
