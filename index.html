@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="game">
-        <div class="title"> 
+        <div id="titles" class="title"> 
            <p id="title">MAGIC</p><h1>Etch-a-Sketch</h1><p id="title">SCREEN</p>
         </div>
         <div id="grid">
@@ -30,12 +30,14 @@
     <div id="modal" class="modal">
         <div class="modal-header">
             <p id="pop-up">Welcome to Jack's Etch-a-Sketch</p>
-            <button data-close-button class="close-button">&times;</button>
+            <button id="close-button" class="close-button">&times;</button>
         </div>
         <div class="modal-body">
         <p>Playing the game is simple. First you will need to select the size 
             of the grid on the left hand side and then select the color with the slider on the
-            right hand side. To start again, reset the grid size. 
+            right hand side. To start again, reset the grid size. <br><br>
+            
+            To open this message again click the title.
         </p>
         </div>
     </div>

@@ -1,8 +1,9 @@
 
 const gridButton = document.getElementById("grid-button");
 const colorButton = document.getElementById("color-button");
+const closeButton = document.getElementById("close-button")
+const title = document.getElementById('titles')
 let colorValue = document.getElementById('color-slider').value;
-let closeModal = document.getElementsByClassName('close-button');
 let modal = document.getElementsByClassName('modal');
 let rainbow = '';
 let paintColor = 'black';
@@ -60,13 +61,23 @@ function paint () {
 
 //Modal open and close functions 
 
-window.onload = function() {
+function helpBox() {
    document.getElementById('modal').className = 'active' + ' ' + 'modal';
    document.getElementById('overlay').className = 'active';
    
 }
 
-closeModal.addEventListener('click', () => {
-    document.getElementById('modal').className = '';
+window.onload = function() {
+    helpBox();
+}
+
+title.addEventListener('click', () => {
+    helpBox();
+
+});
+
+closeButton.addEventListener('click', () => {
+    document.getElementById('modal').className = 'modal';
+    document.getElementById('overlay').className = '';
 
 });
