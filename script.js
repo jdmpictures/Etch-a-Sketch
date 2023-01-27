@@ -50,7 +50,7 @@ function colorSelector () {
     }
 }
 
-//Function that activates 
+//Function that activates random colour selection
 function paint () {
     if (rainbow == 'active'){
             paintColor = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase().toString();
