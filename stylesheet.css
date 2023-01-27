@@ -1,11 +1,11 @@
 @font-face {
     font-family: Minuet;
-    src: url(/fonts/Minuet\ W01\ Bold.ttf);
+    src: url(fonts/Minuet\ W01\ Bold.ttf);
 }
 
 @font-face {
     font-family: Akwe;
-    src: url(/fonts/ROHH\ \ Akwe\ Pro\ Black\ Italic.otf);
+    src: url(fonts/ROHH\ \ Akwe\ Pro\ Black\ Italic.otf);
 }
 html{
     height: 100%;
